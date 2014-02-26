@@ -1,4 +1,4 @@
-This is a simple Maven-based example using ActiveJDBC.
+# Maven-based example using ActiveJDBC.
 Usage:
 
 1. Execute create.sql against your DB - this will create a table. 
