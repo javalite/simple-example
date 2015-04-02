@@ -5,8 +5,9 @@ Usage:
 *  Execute the following command: 
 
 ```
-mvn clean package  exec:java -Dexec.mainClass="activejdbc.examples.simple.SimpleExample"
+mvn clean package  exec:java -Dexec.mainClass="activejdbc.examples.simple.SimpleExample" -Dexec.cleanupDaemonThreads=false
 ```
+
 * Examine the output
 
 
