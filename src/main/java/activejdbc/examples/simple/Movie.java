@@ -13,7 +13,7 @@ public class Movie extends Model {
         set("title", title);
     }
 
-    public void addPerson(Model person, Person.TYPE type) {
+    public void addPerson(Person person, Person.TYPE type) {
         if(!person.exists()){
             person.saveIt(); // will generate ID
         }
