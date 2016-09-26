@@ -14,8 +14,11 @@ public class Main {
 
         Base.open();
 
-        Movie movie = new Movie("Saving Private Ryan ");
-        movie.saveIt();
+        Movie movie = new Movie();
+
+        movie.save();
+
+        System.out.println(movie.getId());
 
         Person director  = new Person("Stephen Spielberg");
         movie.addPerson(director, Person.TYPE.director);
