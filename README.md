@@ -43,4 +43,14 @@ Model: activejdbc.examples.simple.Person, table: 'people', attributes: {id=4, na
 ```
 
 
+h2. Instrumentation
+
+If you run  this example from an IDE, you will need to instriment models. Here is how: 
+
+    mvn process-classes
+ 
+ another way of doing the same is: 
+ 
+    mvn activejdbc-instrumentation:instrument
+
 
