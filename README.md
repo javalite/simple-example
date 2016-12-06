@@ -31,7 +31,14 @@ Usage:
 
 
 ```
-mvn clean package  exec:java -Dexec.mainClass="activejdbc.examples.simple.Main" -Dexec.cleanupDaemonThreads=false
+# this will collect all dependencies under target dir.
+mvn dependency:unpack-dependencies
+
+# Execute the program from command line:
+java -classpath target/dependency:target/classes activejdbc.examples.simple.Main
+
+# Same with ActiveJDBC logging turned on:
+java -classpath target/dependency:target/classes -Dactivejdbc.log activejdbc.examples.simple.Main
 ```
 
 * Examine the output: 
@@ -39,7 +46,8 @@ mvn clean package  exec:java -Dexec.mainClass="activejdbc.examples.simple.Main" 
 Line similar to this at the end: 
 
 ```
-Model: activejdbc.examples.simple.Person, table: 'people', attributes: {id=4, name=Stephen Spielberg}
+Model: activejdbc.examples.simple.Movie, table: 'movies', attributes: {id=1, title=Saving private Ryan, year=1998}
+Model: activejdbc.examples.simple.Movie, table: 'movies', attributes: {id=2, title=Jaws, year=1982}
 ```
 
 

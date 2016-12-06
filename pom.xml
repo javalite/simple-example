@@ -10,15 +10,17 @@
     <packaging>jar</packaging>
 
     <properties>
-        <activejdbc.version>1.4.12</activejdbc.version>
+        <activejdbc.version>1.4.13-SNAPSHOT</activejdbc.version>
+        <environments>development.test,development</environments>
     </properties>
+
 
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.3.2</version>
+                <version>3.6.0</version>
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
@@ -46,7 +48,7 @@
                 <version>${activejdbc.version}</version>
                 <configuration>
                     <configFile>${project.basedir}/src/main/resources/database.properties</configFile>
-                    <environments>development</environments>
+                    <environments>${environments}</environments>
                 </configuration>
                 <executions>
                     <execution>

@@ -17,6 +17,5 @@ CREATE TABLE movies_people (
   id        INT(11) NOT NULL AUTO_INCREMENT,
   movie_id  INTEGER NOT NULL,
   person_id INTEGER NOT NULL,
-  type VARCHAR(128),
   PRIMARY KEY (id)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8;

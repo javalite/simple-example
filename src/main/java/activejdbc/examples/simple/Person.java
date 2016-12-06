@@ -7,8 +7,6 @@ import org.javalite.activejdbc.Model;
  */
 public class Person extends Model {
 
-    enum TYPE{ actor, director}
-
     public Person() {}
 
     public Person(String name){
