@@ -28,7 +28,7 @@ public class MovieSpec extends DBSpec {
         director.add(new Movie("Saving private Ryan", 1998));
         director.add(new Movie("Jaws", 1982));
 
-        a(MoviesPeople.count()).shouldBeEqual(2);
+        a(Movie.count()).shouldBeEqual(2);
 
         List<Movie> movies = director.getAll(Movie.class).orderBy("year");
 
