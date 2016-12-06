@@ -7,20 +7,19 @@ import org.javalite.activejdbc.Model;
  */
 public class Movie extends Model {
 
+    static {
+        validatePresenceOf("title", "year");
+    }
+
     public Movie() {}
 
-    public Movie(String title) {
-        set("title", title);
+    public Movie(String title, int year) {
+        set("title", title, "year", year);
     }
 
-    public void addPerson(Person person, Person.TYPE type) {
-        if(!person.exists()){
-            person.saveIt(); // will generate ID
-        }
-        MoviesPeople mp = new MoviesPeople();
-        mp.set("type", type.name());
-        mp.set("person_id", person.getId());
-        mp.set("movie_id", getId());
-        mp.saveIt();
+
+    public String getTitle(){
+        return getString("title");
     }
+
 }
