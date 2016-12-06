@@ -9,24 +9,20 @@ import java.util.List;
 /**
  * @author igor on 12/2/16.
  */
-public class MovieSpec extends DBSpec{
-
+public class MovieSpec extends DBSpec {
 
     @Test
-    public void shouldValidateMovieAttributes(){
+    public void shouldValidateMovieAttributes() {
         Movie movie = new Movie();
         the(movie).shouldNotBe("valid");
         movie.set("title", "blah", "year", "1122");
         the(movie).shouldBe("valid");
     }
 
+    @Test
+    public void shouldStoreDirectorAndMovies() {
 
-
-
-        @Test
-    public void shouldStoreDirectorAndMovies(){
-
-        Person director  = new Person("Stephen Spielberg");
+        Person director = new Person("Stephen Spielberg");
         director.saveIt();
 
         director.add(new Movie("Saving private Ryan", 1998));
