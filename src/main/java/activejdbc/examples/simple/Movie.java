@@ -17,9 +17,7 @@ public class Movie extends Model {
         set("title", title, "year", year);
     }
 
-
     public String getTitle(){
         return getString("title");
     }
-
 }
