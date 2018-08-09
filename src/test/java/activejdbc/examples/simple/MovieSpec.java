@@ -1,6 +1,6 @@
 package activejdbc.examples.simple;
 
-import org.javalite.activejdbc.Base;
+
 import org.javalite.activejdbc.test.DBSpec;
 import org.junit.Test;
 
