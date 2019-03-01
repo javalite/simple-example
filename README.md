@@ -35,9 +35,9 @@ Usage:
 mvn dependency:unpack-dependencies
 
 # Execute the program from command line:
-# Linux
+# Linux:
 java -classpath target/dependency:target/classes activejdbc.examples.simple.Main
-#Windows:
+# Windows:
 java -classpath target\dependency;target\classes activejdbc.examples.simple.Main 
 
 # Same with ActiveJDBC logging turned on:
